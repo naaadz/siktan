@@ -1,0 +1,17 @@
+statements = [
+	{id:0, file: '/path/to/file.mp3', playing: false, questions: [
+	   {id: 0, file: 'path/to/file.mp3', active: false, playing: false},
+	   {id: 1, file: 'path/to/file.mp3'},
+	   {id: 2, file: 'path/to/file.mp3'},
+	   {id: 3, file: 'path/to/file.mp3'}
+	]},
+	{id:1, file: '/path/to/file.mp3', playing: false, questions: [
+	   {id: 0, file: 'path/to/file.mp3', active: false, playing: false},
+	   {id: 1, file: 'path/to/file.mp3'},
+	   {id: 2, file: 'path/to/file.mp3'},
+	   {id: 3, file: 'path/to/file.mp3'}
+	]}
+   ]
+   
+   
+   

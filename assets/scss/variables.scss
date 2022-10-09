@@ -1,0 +1,180 @@
+//******* New Color Definitions *********//
+
+
+//default
+$default-light: white;
+$default-light-dark: #707ca9;
+$default-dark: #141935;
+
+//primary
+$primary-1-light: #1796ff;
+$primary-1-dark: #0088ff;
+$primary-1-deep: #0077db;
+
+$primary-2-light: #7c4dff;
+$primary-2-dark: #6532fd;
+$primary-2-deep: #512ad8;
+
+$primary-3-light: #25cadf;
+$primary-3-dark: #00b8d4;
+$primary-3-deep: #00a0b5;
+
+$primary-4-light: #f1437e;
+$primary-4-dark: #e21f66;
+$primary-4-deep: #c1145a;
+
+$primary-5-light: #ffd54f;
+$primary-5-dark: #ffbe07;
+$primary-5-deep: #fca800;
+
+$primary-6-light: #00d38a;
+$primary-6-dark: #00c566;
+$primary-6-deep: #00a955;
+
+//secondary
+$secondary-1-light: #ff5252;
+$secondary-1-dark: #e53935;
+$secondary-1-deep: #d2362f;
+
+$secondary-2-light: #ffa726;
+$secondary-2-dark: #ff9100;
+$secondary-2-deep: #e57505;
+
+$secondary-3-light: #98d71e;
+$secondary-3-dark: #72cd35;
+$secondary-3-deep: #6cab19;
+
+$secondary-4-light: #ffec17;
+$secondary-4-dark: #f3df00;
+$secondary-4-deep: #e0bf03;
+
+$secondary-5-light: #00d2ce;
+$secondary-5-dark: #00c6c2;
+$secondary-5-deep: #28a0a9;
+
+$secondary-6-light: #d536f9;
+$secondary-6-dark: #b733f4;
+$secondary-6-deep: #8c2de2;
+
+$secondary-7-light: #3f76ff;
+$secondary-7-dark: #1b68f6;
+$secondary-7-deep: #0058f0;
+
+$tertiary-1-light: #536eff;
+
+//primary-new
+$primary-pastel-1-light: #00e1ed;
+$primary-pastel-1-dark: #0080ff;
+$primary-pastel-1-deep: #0080ff;
+
+$primary-pastel-2-light: #86a4ff;
+$primary-pastel-2-dark: #7b6aff;
+$primary-pastel-2-deep: #702fff;
+
+$primary-pastel-3-light: #ff90e4; 
+$primary-pastel-3-dark: #ff4bc2; 
+$primary-pastel-3-deep: #ff009d; 
+
+$primary-pastel-4-light: #a3ebe6;
+$primary-pastel-4-dark: #54e0e4;
+$primary-pastel-4-deep: #00d5e2;
+
+$primary-pastel-5-light: #ffc58e;
+$primary-pastel-5-dark: #ff939a;
+$primary-pastel-5-deep: #ff5fa6;
+
+$primary-pastel-6-light: #ceff9d; 
+$primary-pastel-6-dark: #6beea9; 
+$primary-pastel-6-deep: #00dbb7; 
+
+//darks
+$dark-10: #333957;
+$dark-20: #202647; 
+$dark-30: $default-dark; 
+$dark-40: #0a0f2c; 
+$dark-50: #04041e; 
+
+//watermarks
+$watermarkBlue: rgba($primary-1-light, 0.08);
+$watermarkGray: rgba($default-light-dark, 0.1);
+
+
+//by feature
+// prettier-ignore
+$features: 
+    'model-vis' $primary-1-deep $primary-1-light '\e910', 
+    'reporting' $primary-2-deep $primary-2-light '\e924',
+    'trade-area' $primary-3-deep $primary-3-light '\e91f',
+    'forecast' $primary-6-deep $primary-6-light '\e926',
+    'heat-map' $secondary-6-deep $secondary-6-light '\e928',
+    'correlation-dash' $secondary-7-deep $secondary-7-light '\e871',
+    'revenue-layers' $primary-5-deep $primary-5-light '\e53b',
+    'territory-mgmt' $primary-4-deep $primary-4-light '\e925';
+
+
+//by industry
+$industries: retail, restaurant, c-store, private-equity, grocery, education,
+    healthcare, banking;
+
+$industry-colors: (
+    retail: (
+        light: $primary-1-light,
+        dark: $primary-1-dark,
+        deep: $primary-1-deep,
+        icon: '\f02c',
+    ),
+    restaurant: (
+        light: $secondary-2-light,
+        dark: $secondary-2-dark,
+        deep: $secondary-2-deep,
+        icon: '\e56c',
+    ),
+    c-store: (
+        light: $primary-2-light,
+        dark: $primary-2-dark,
+        deep: $primary-2-deep,
+        icon: '\e546',
+    ),
+    private-equity: (
+        light: $primary-3-light,
+        dark: $primary-3-dark,
+        deep: $primary-3-deep,
+        icon: '\e900',
+    ),
+    grocery: (
+        light: $primary-5-light,
+        dark: $primary-5-dark,
+        deep: $primary-5-deep,
+        icon: '\f07a',
+    ),
+    healthcare: (
+        light: $primary-4-light,
+        dark: $primary-4-dark,
+        deep: $primary-4-deep,
+        icon: '\f21e',
+    ),
+    education: (
+        light: $secondary-6-light,
+        dark: $secondary-6-dark,
+        deep: $secondary-6-deep,
+        icon: '\e54b',
+    ),
+    banking: (
+        light: $secondary-3-light,
+        dark: $secondary-3-dark,
+        deep: $secondary-3-deep,
+        icon: '\f155',
+    ),
+);
+
+@mixin makeButton($type, $color: $primary-1-light) {
+    @if ($type == 'fill') {
+        background: $color
+            linear-gradient(45deg, $color 0, darken($color, 8%) 100%);
+    }
+    @if ($type == 'hollow') {
+        background: transparent;
+    }
+
+    border: 2px solid $color;
+}
