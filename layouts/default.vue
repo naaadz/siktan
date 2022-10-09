@@ -2,12 +2,15 @@
     <div>
         <Html>
             <Head>
-                <Title>Test</Title>
+                <Title>SikTan</Title>
             </Head>
             <Body>
-                <div class="wrap flex" :class="{ 'mobile-menu-open' : data.mobileMenuOpen }">
-                    <!-- <HeaderMain @mobileMenuClick="onMobileMenuClick" /> -->
-                    <div class="wrap-inner w-full" >
+                <div class="wrap">
+                    <header class="flex bg-black w-full items-center justify-center py-6 gap-2">
+                        <i class="mat-ico text-white text-4xl">lyrics</i>
+                        <span class="text-4xl text-white">SikTan</span>
+                    </header>
+                    <div>
                         <slot />
                     </div>
                     <div class="mobile-menu w-3/4 lg:hidden p-10">
